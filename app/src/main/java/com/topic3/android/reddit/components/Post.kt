@@ -43,6 +43,7 @@ fun ImagePost(post: PostModel) {
 
 @Composable
 fun Post(post: PostModel, content: @Composable () -> Unit = {}) {
+    //TODO
     Card(shape = MaterialTheme.shapes.large) {
         Column(
             modifier = Modifier.padding(
@@ -61,6 +62,7 @@ fun Post(post: PostModel, content: @Composable () -> Unit = {}) {
 
 @Composable
 fun Header(post: PostModel) {
+    //TODO
     Row(modifier = Modifier.padding(start = 16.dp)) {
         Image(
             ImageBitmap.imageResource(id = R.drawable.subreddit_placeholder),
@@ -159,6 +161,7 @@ fun TextContent(text: String) {
 
 @Composable
 fun ImageContent(image: Int) {
+    //TODO
     val imageAsset = ImageBitmap.imageResource(id = image)
     Image(
         bitmap = imageAsset,
@@ -204,6 +207,7 @@ fun VotingAction(
     onUpVoteAction: () -> Unit,
     onDownVoteAction: () -> Unit
 ) {
+    //TODO
     Row(verticalAlignment = Alignment.CenterVertically) {
         ArrowButton(
             onUpVoteAction,
@@ -221,6 +225,7 @@ fun VotingAction(
 
 @Composable
 fun ArrowButton(onClickAction: () -> Unit, arrowResourceId: Int) {
+    //TODO
     IconButton(onClick = onClickAction, modifier = Modifier.size(30.dp)) {
         Icon(
             imageVector = ImageVector.vectorResource(arrowResourceId),
