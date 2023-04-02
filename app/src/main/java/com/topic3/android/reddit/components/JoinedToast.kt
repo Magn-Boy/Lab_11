@@ -20,8 +20,13 @@ import com.topic3.android.reddit.R
 @Composable
 
 fun JoinedToast(visible: Boolean) {
+    AnimatedVisibility(
+        visible = visible,
+        enter = slideInVertically(initialOffsetY = { +40 }) + fadeIn(),
+        exit = slideOutVertically() + fadeOut()
+    ) {
         ToastContent()
-
+    }
 }
 
 @Composable
