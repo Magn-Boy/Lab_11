@@ -101,7 +101,7 @@ fun JoinButton(onClick: (Boolean) -> Unit = {}){
             .border(width = 1.dp, color = Color.Blue, shape = shape)
             .background(color = buttonBackgroundColor)
             .size(
-                width = 40.dp,
+                width = buttonWidth,
                 height = 24.dp
             )
             .clickable(
@@ -118,13 +118,28 @@ fun JoinButton(onClick: (Boolean) -> Unit = {}){
             ),
         contentAlignment = Alignment.Center
     ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             Icon(
                 imageVector = iconAsset,
                 contentDescription = "Plus Icon",
                 tint = iconTintColor,
                 modifier = Modifier.size(16.dp)
             )
+            Text(
+                text="Join",
+                color = Color.White,
+                fontSize = 14.sp,
+                maxLines = 1,
+                modifier = Modifier
+                    .widthIn(
+                        min = 0.dp,
+                        max = textMaxWidth
+                    )
+            )
         }
+    }
 }
 
 
